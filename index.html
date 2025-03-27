@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form & Rating</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  
+  
+<div id="player"></div>
+
+    <!-- Animasi Loading Sebelum Masuk -->
+    <div class="loading-screen">
+        <h1>Selamat Datang!</h1>
+        <p>Memuat Halaman...</p>
+    </div>
+
+    <div class="container hidden">
+        <!-- Halaman Formulir -->
+        <div class="form-container">
+            <h2>Formulir Data</h2>
+            <form id="dataForm">
+                <div class="form-step active">
+                    <input type="text" id="nama" placeholder="Nama" required>
+                    <button type="button" onclick="nextStep()">Lanjut</button>
+                </div>
+                <div class="form-step">
+                    <input type="number" id="umur" placeholder="Umur" required>
+                    <button type="button" onclick="nextStep()">Lanjut</button>
+                </div>
+                <div class="form-step">
+                    <input type="text" id="alamat" placeholder="Alamat" required>
+                    <button type="button" onclick="nextStep()">Lanjut</button>
+                </div>
+                <div class="form-step">
+                    <input type="email" id="email" placeholder="Email" required>
+                    <button type="button" onclick="nextStep()">Lanjut</button>
+                </div>
+                <div class="form-step">
+                    <textarea id="keluhan" placeholder="Keluhan (Opsional)"></textarea>
+                    <button type="button" onclick="showRatingPage()">Lanjut ke Rating</button>
+                </div>
+            </form>
+        </div>
+
+        <!-- Halaman Rating -->
+        <div class="rating-container hidden">
+            <h2>Beri Rating</h2>
+            <div class="stars">
+                <span class="star" data-value="1">★</span>
+                <span class="star" data-value="2">★</span>
+                <span class="star" data-value="3">★</span>
+                <span class="star" data-value="4">★</span>
+                <span class="star" data-value="5">★</span>
+            </div>
+            <p id="ratingValue">Pilih Rating</p>
+            <button onclick="sendToWhatsApp()">Kirim ke WhatsApp</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

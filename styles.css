@@ -1,0 +1,100 @@
+body {
+    font-family: Arial, sans-serif;
+    background: url('https://raw.githubusercontent.com/Igimonsan/Image/refs/heads/main/31aca7bf32a8cadac9172b29b4d79f3d.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    text-align: center;
+}
+
+/* Animasi Loading */
+.loading-screen {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    animation: fadeOut 3s forwards;
+    z-index: 10;
+}
+
+.hidden {
+    display: none;
+}
+
+@keyframes fadeOut {
+    0% { opacity: 1; }
+    100% { opacity: 0; visibility: hidden; }
+}
+
+/* Container Utama */
+.container {
+    width: 90%;
+    max-width: 500px;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.7);
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.2);
+}
+
+/* Form Step by Step */
+.form-step {
+    display: none;
+}
+
+.form-step.active {
+    display: block;
+    animation: slideIn 0.5s ease-in-out;
+}
+
+input, textarea, button {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    font-size: 18px;
+    border-radius: 5px;
+    border: none;
+}
+
+button {
+    background: #ff7eb3;
+    color: white;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #ff4d88;
+}
+
+/* Slide Animasi */
+@keyframes slideIn {
+    from { transform: translateY(20px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+/* Rating */
+.stars {
+    display: flex;
+    justify-content: center;
+    font-size: 40px;
+    cursor: pointer;
+    gap: 10px;
+}
+
+.stars span {
+    transition: color 0.3s;
+}
+
+.stars span:hover, .stars span.active {
+    color: gold;
+}
+
